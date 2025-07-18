@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        //Khi đang dash sẽ bất tử
         if (Player.instance.rollOnce == false)
         {
             if (currentHealth > 0)

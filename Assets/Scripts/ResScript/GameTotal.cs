@@ -50,17 +50,17 @@ public class GameTotal : MonoBehaviour
         animator.Play("UIGameOverPopUp");
 
         AudioManager.instance.OnGameUIPopUp();
-        if(Score.instance.highScore)
+        if (Score.instance.highScore)
         {
             highScoreTag.SetActive(true);
         }
 
-        float testId = (float)totalScore/90;
+        float testId = (float)totalScore / 90;
         Debug.Log(testId);
         for (int i = 0; i < marks.Length; i++)
         {
             PrefabID prefabID = marks[i].GetComponent<PrefabID>();
-            if ((prefabID.id > testId && prefabID.id-1 <= testId) || i == marks.Length - 1) 
+            if ((prefabID.id > testId && prefabID.id - 1 <= testId) || i == marks.Length - 1)
             {
                 GameObject markClone = Instantiate(marks[i], new Vector3(0, 0, 0), Quaternion.identity, markPos.transform);
                 // markClone.RectTransform.anchoredPosition = Vector2.zero;
@@ -76,9 +76,11 @@ public class GameTotal : MonoBehaviour
     }
     public void OnPLayAgain()
     {
-        SceneManager.LoadScene("Scenes/SampleScene");
+        string currentScene = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentScene);
         Time.timeScale = 1f;
     }
+
     public void OnExitToScreen()
     {
         SceneManager.LoadScene("Scenes/StartScene");

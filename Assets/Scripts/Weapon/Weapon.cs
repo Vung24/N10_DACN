@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     
     public bool isFire = false;
     public static Weapon instance;
-    void Start()
+    void Awake()
     {
         if (instance == null)
             instance = this;

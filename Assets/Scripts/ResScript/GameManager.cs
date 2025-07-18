@@ -25,10 +25,10 @@ public class GameManager : MonoBehaviour
         sfxSource.clip = buttonClick;
         sfxSource.Play();
     }
-    public void PlayGame()
+    public void ChooseMap()
     {
         OnButtonCLick();
-        SceneManager.LoadScene("Scenes/SampleScene");
+        SceneManager.LoadScene("Scenes/ChooseMap");
     }
     public void TurnOnInstruction()
     {
