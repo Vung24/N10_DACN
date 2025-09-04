@@ -18,6 +18,7 @@ public class Score : MonoBehaviour
     }
     private void Start()
     {
+        // PlayerPrefs.SetInt("HighScore", 0);
         highScore = false;
         _currentScoreText.text = "Score: " + _score.ToString();
         _highScoreText.text = "High Score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
@@ -40,4 +41,5 @@ public class Score : MonoBehaviour
         _currentScoreText.text = "Score: " + _score.ToString();
         UpdateHighScore();
     }
+    
 }

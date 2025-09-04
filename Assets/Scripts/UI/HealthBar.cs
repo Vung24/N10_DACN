@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections; 
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,8 +8,7 @@ public class HealthBar : MonoBehaviour
     public Image fillBar;
     public TextMeshProUGUI healthText;
     public static HealthBar instance;
-    // int currHealth, damage;
-    // public GameObject floatText;
+
     void Start()
     {
         if(instance == null)
